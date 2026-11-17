@@ -1,0 +1,90 @@
+*{box-sizing:border-box}
+body{margin:0;background:#111318;color:#d6d9e0;font:13px Inter,system-ui}
+button,input,textarea{font:inherit;color:inherit}
+button{background:#242730;border:1px solid #373b46;border-radius:5px;padding:7px 10px;cursor:pointer;display:inline-flex;align-items:center;gap:5px}
+button:hover{background:#303441}
+button:disabled{opacity:0.5;cursor:not-allowed}
+input,textarea{background:transparent;border:0;outline:0}
+main{height:100vh;display:flex;flex-direction:column}
+header{height:48px;display:flex;align-items:center;gap:20px;padding:0 12px;background:#191b21;border-bottom:1px solid #2c3039}
+.brand{display:flex;align-items:center;gap:8px}
+.brand svg{color:#a78bfa}
+.brand small{font-size:10px;color:#b6a0f5;background:#292239;padding:3px;border-radius:4px}
+.root{display:flex;align-items:center;gap:8px;flex:1;max-width:650px}
+.root input{flex:1;min-width:80px}
+.status{color:#8c94a3;font-size:11px}
+.layout{display:flex;flex:1;min-height:0}
+.layout>aside:first-child{width:220px;background:#16181e;border-right:1px solid #2b2e37;padding:10px;overflow:auto}
+.layout h4{font-size:10px;letter-spacing:1px;color:#9ba2b0}
+.filter{display:flex;gap:7px;padding:7px;border:1px solid #30343d;border-radius:5px;margin-bottom:8px}
+.filter svg{width:14px}
+.filter input{width:100%}
+.file{display:block;width:100%;text-align:left;background:none;border:0;padding:6px;color:#aeb5c3;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.file.sel{background:#292b38;color:#c4b5fd}
+.work{flex:1;display:flex;flex-direction:column;min-width:0}
+.tab{height:36px;background:#191b21;padding:0 10px;border-bottom:1px solid #2b2e37;display:flex;align-items:center;justify-content:space-between}
+.tab-title{font-weight:500;font-size:12px;color:#e2e8f0}
+.tab-actions{display:flex;align-items:center;gap:6px}
+.btn-action{padding:3px 8px;font-size:11px;background:#232733;border:1px solid #3c4254;border-radius:4px}
+.btn-action:hover{background:#32384a}
+.editor{flex:1;min-height:0}
+footer{height:27px;background:#191b21;border-top:1px solid #2b2e37;display:flex;align-items:center;justify-content:space-between;padding:0 8px;color:#8e96a4;font-size:10px}
+footer button{display:flex;align-items:center;gap:5px;padding:3px}
+.footer-term-btn.active{background:#6e4bc4;border-color:#7c56dc;color:#fff}
+.chat{width:330px;display:flex;flex-direction:column;border-left:1px solid #2b2e37;background:#16181e}
+.chat h3{height:36px;margin:0;padding:10px;display:flex;gap:8px;align-items:center;border-bottom:1px solid #2b2e37;font-size:12px}
+.chat h3 svg{width:16px;color:#a78bfa}
+.messages{flex:1;overflow:auto;padding:10px}
+.messages article{margin-bottom:16px}
+.messages label{font-size:9px;letter-spacing:1px;color:#8b93a2}
+.messages p{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.5;margin:6px 0}
+.compose{padding:10px;border-top:1px solid #2b2e37;display:flex;gap:6px;align-items:end}
+.compose textarea{background:#242730;border:1px solid #373b46;border-radius:6px;padding:8px;resize:vertical;min-height:65px;flex:1}
+.compose button{background:#7656ce;border-color:#7656ce}
+.compose svg{width:15px}
+
+/* Advanced Multi-Terminal Panel Styling */
+.terminal-panel{height:250px;border-top:1px solid #2c313c;background:#0d0f14;display:flex;flex-direction:column}
+.terminal-header{height:32px;background:#14171f;border-bottom:1px solid #232732;display:flex;align-items:center;justify-content:space-between;padding:0 6px}
+.terminal-tabs{display:flex;align-items:center;gap:3px;overflow-x:auto}
+.term-tab{display:inline-flex;align-items:center;gap:5px;padding:4px 9px;font-size:11px;color:#94a3b8;background:#11131a;border:1px solid transparent;border-radius:4px 4px 0 0;cursor:pointer;user-select:none}
+.term-tab:hover{background:#181c26;color:#e2e8f0}
+.term-tab.sel{background:#0d0f14;color:#c084fc;border-color:#232732;border-bottom-color:#0d0f14;font-weight:500}
+.term-tab-close{background:none;border:none;padding:1px;color:#64748b;border-radius:3px;cursor:pointer;display:flex;align-items:center}
+.term-tab-close:hover{background:#334155;color:#ef4444}
+.term-add-btn{background:none;border:1px dashed #334155;color:#94a3b8;padding:2px 5px;border-radius:3px;cursor:pointer;margin-left:2px}
+.term-add-btn:hover{background:#1e2430;color:#c084fc;border-color:#7c3aed}
+.terminal-actions{display:flex;align-items:center;gap:4px}
+.term-tool-btn{background:none;border:none;padding:3px 6px;color:#64748b;cursor:pointer;border-radius:3px}
+.term-tool-btn:hover{background:#1e2430;color:#e2e8f0}
+.terminal-body{flex:1;overflow-y:auto;padding:8px 12px;font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;font-size:12px;line-height:1.5;cursor:text}
+.terminal-output{display:flex;flex-direction:column;gap:4px}
+.term-line{white-space:pre-wrap;word-break:break-all}
+.term-system{color:#64748b;font-style:italic;font-size:11px}
+.term-cmd-line{margin-top:6px;display:flex;align-items:baseline;gap:6px}
+.term-prompt{display:inline-flex;align-items:baseline;gap:2px;font-weight:600}
+.term-prompt-user{color:#38bdf8}
+.term-prompt-sep{color:#64748b}
+.term-prompt-path{color:#4ade80}
+.term-prompt-sym{color:#fbbf24;font-weight:bold}
+.term-cmd-text{color:#f8fafc;font-weight:500}
+.term-output-block{margin-left:4px;margin-bottom:4px}
+.term-stdout{margin:0;color:#cbd5e1;white-space:pre-wrap;font-family:inherit}
+.term-stderr{margin:0;color:#f87171;white-space:pre-wrap;font-family:inherit}
+.term-exit{font-size:10px;margin-top:2px;font-weight:500}
+.term-exit.exit-ok{color:#10b981}
+.term-exit.exit-err{color:#ef4444}
+.term-error{color:#ef4444;background:#241416;padding:4px 8px;border-radius:4px;border:1px solid #451a1e}
+.term-busy{color:#f59e0b;font-size:11px;display:flex;align-items:center;gap:6px}
+.term-spinner{animation:pulse 1s infinite;color:#f59e0b}
+.terminal-prompt-input-line{display:flex;align-items:center;gap:6px;margin-top:6px;padding-top:4px}
+.term-input{flex:1;color:#f8fafc;font-family:inherit;font-size:12px;border:none;outline:none;background:transparent;caret-color:#c084fc}
+.term-exec-btn{background:#7c3aed;border:none;color:#fff;padding:2px 7px;border-radius:3px;cursor:pointer;display:inline-flex;align-items:center}
+.term-exec-btn:hover{background:#6d28d9}
+.term-exec-btn:disabled{opacity:0.3;cursor:not-allowed}
+
+.bar{height:22px;background:#6e4bc4;padding:4px 9px;font-size:10px}
+.bar span{float:right}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+@media(max-width:850px){.chat{width:280px}.layout>aside:first-child{width:170px}}
+@media(max-width:650px){.layout>aside:first-child{display:none}.chat{width:42%}.root{gap:3px}}
